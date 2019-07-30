@@ -1,0 +1,105 @@
+华为的笔试题ZZ 
+shury 发表于 2004-12-6 15:14:00 
+
+1.    找错
+Void test1()
+{
+    char string[10];
+    char* str1=”0123456789”;
+strcpy(string, str1);
+}
+
+
+Void test2()
+{
+    char string[10], str1[10];
+for(I=0; I<10;I++)
+{
+        str1[i] =’a’;
+}
+strcpy(string, str1);
+}
+
+Void test3(char* str1)
+{
+    char string[10];
+    if(strlen(str1)<=10)
+{
+    strcpy(string, str1);
+}
+}
+
+
+2.    找错
+#define MAX_SRM 256
+
+DSN get_SRM_no()
+{
+        static int SRM_no;
+        int I;
+        for(I=0;I<MAX_SRM;I++,SRM_no++)
+{
+SRM_no %= MAX_SRM;
+if(MY_SRM.state==IDLE)
+{
+    break;
+}
+}
+if(I>=MAX_SRM)
+return (NULL_SRM);
+else
+return SRM_no;
+}
+
+
+3.    写出程序运行结果
+
+int sum(int a)
+{
+        auto int c=0;
+        static int b=3;
+c+=1;
+b+=2;
+return(a+b+C);
+}
+    
+void main()
+{
+        int I;
+int a=2;
+for(I=0;I<5;I++)
+{
+    printf(“%d,”, sum(a));
+}
+}
+
+4.    
+
+int func(int a)
+{
+    int b;
+    switch(a)
+    {
+        case 1: 30;
+        case 2: 20;
+        case 3: 16;
+        default: 0
+}
+return b;
+}
+则func(1)=?
+
+5:
+int a[3];
+a[0]=0; a[1]=1; a[2]=2;
+int *p, *q;
+p=a;
+q=&a[2];
+则a[q-p]=?
+
+6. 
+定义 int **a[3][4], 则变量占有的内存空间为：_____
+
+7.
+编写一个函数，要求输入年月日时分秒，输出该年月日时分秒的下一秒。如输入2004年12月31日23时59分59秒，则输出2005年1月1日0时0分0秒。 
+ 

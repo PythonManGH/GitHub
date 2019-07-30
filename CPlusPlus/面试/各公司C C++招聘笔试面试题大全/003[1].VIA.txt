@@ -1,0 +1,6 @@
+共五道题,大致如下:
+1.图示从RTL synthesis到tape out之间的设计flow,并列出其中各步使用的tool.
+2.用perl或TCL/Tk实现一段字符串识别和比较的程序. (唉,都不懂)
+3.画出一种CMOS的D锁存器的电路图和版图.
+4.解释setup time和hold time的定义和在时钟信号延迟时的变化.
+5.解释latch-up现象和Antenna effect和其预防措施.

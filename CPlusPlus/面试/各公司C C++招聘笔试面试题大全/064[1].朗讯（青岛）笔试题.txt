@@ -1,0 +1,38 @@
+朗讯（青岛）笔试题ZZ 
+shury 发表于 2004-12-6 14:05:00 
+
+朗讯（青岛）笔试题，共7页，2hours，
+有些题是英文，我只记得中文了。
+1.Quick caculation(10分)
+I.
+a 8月1日是星期三，问到9月的第一个星期六有多少天？（包括8月1日和那个星期六）
+b 一月有5个星期一5个星期二5个星期三，2月1日是星期几？
+II.6只猫6分钟捉6只老鼠，问10分钟抓10只老鼠需要几只猫？
+2.Basic Algorithm(10)
+Given an arbitrary binary tree,propose a method to determine the first commo
+n ancestor of 2
+randomly selected nodes in the tree.
+3.Basi computer knowledge (10)
+ 1 把16进制译成8 bit的2进制字符 FF,7F,F0
+ 2 web browser与search engine的区别
+ 3 osi的七层网络模型，以及网关工作在哪一层？
+4操作系统（10）
+ 请解释死锁deadlock，以及防止死锁的方法。
+5数据库（10）
+a tabel called “performance”contain ：name and score，please 用SQL语言表述
+如何选出score最high的一个（仅有一个）
+6编程题（50分）
+I  the program  that tranlate high level program into low_level program to b
+e execute in computer 叫做什么？
+II  c和java都是可移植的，但是是在不同的level，请指出它们分别在那个level上可以
+移植。
+III static char S[]="I come not to bury caesar."
+ 请给出结果：
+ a) printf("%s",s)
+ b) printf("%s",&s[0])
+ c) printf("%s",s+11)
+IV 有个程序让改错，好像是有一句memcpy(buffer,pMsg->content+7,msglen)错了，我
+觉得中间的参数应该是&（pMsg->content+7）。
+V 写一个递归程序求“n!”，语言可以自选，最好用C/c++或java、delphi、pascal。
+VI 有一个实现多项式乘法的c程序，有10处空白，让你补充。太长了，我记不了了。 
+ 

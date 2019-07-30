@@ -1,0 +1,48 @@
+1.Jeff and Diamond like playing game of coins,One day they
+designed a new set of rules:
+1)Totally 10 coins
+2)One can take away 1,2or 4 coins at one time by turns
+3)Who takes the last loses.
+Given these rules Whether the winning status is pre-determined or not
+
+解答：
+1：从后面开始考虑，最后肯定要留1个才能保证自己赢
+2：所以要设法让对方留下2，3，5个
+3：也就是要自己取后留下1，4，6，7，8，9。。。
+4：如果自己取后留下6，对方取2个，与（3）矛盾，所以排除6
+5：如果自己取后留下8，对方取4个，与（3）一样情况，所以也排除8
+6：同样，9也不行，如果我抽后剩下9，对方抽2个，就反过来成对方抽剩成7个了，也与
+（
+3）矛盾，所以也排除
+7：所以很显然，我只能抽剩1，4，7
+8：因为只能抽后剩1，4，7才能赢，我先抽得话不可能达到这几个数，很显然，只能让
+对
+方先抽，也即是先抽的人输 
+
+
+2.the UI specialist Dafna found a problem that some of the
+Items on the marketing document form overlapped with each other.
+because this form was implemented by differnt developers and
+they didn't care the particular appearance of one item.Product manager
+Tidav decided to write one small checking tool to generate the overlapped
+items on all forms.He called in his guys to discuss about it.
+Suppose the input is the integer coordinates (x,y)od the items (all rectangl
+es)
+on one form.Construct an efficient methed to find out the overlapped items.
+Hint:The most direct way to do so is comparing each items with
+the others,Given 1000 forms.each with 100-1000items on average.
+the O(n2) algorithm is costly.Some guru suggested that one O(n)
+method could help only if 6.5 kilobytes extra storage is available.
+One elite argued that he could cut down the number to 1%,It's now your
+turn to describe the idea.write out the pseudocodes,vertify his
+algorithm and propose more advanced optimization if possible.
+
+3 in a file system ,data need not be sequentially located in physical
+blocks,We use a number of tables storing nodes imformation.Suppose
+now we use a fixed node size of variable-lenth n,it takes [n/(k-b)]
+nodes to store this item.(Here b is a constant, signifying that
+b words of each node contain control information,such as a link to the
+next node).If the avarage length n of an Item is N,what choise
+of k minimizes the average amount of storage space required?
+(Assume that the average value of (n/(k-b)) mod 1 is equal to 1/2 ,for any 
+fixed k, as n varies)

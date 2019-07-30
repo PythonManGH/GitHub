@@ -1,0 +1,463 @@
+1. Shell variables
+	1.1 Define variables
+		name="Liujun"
+			1):There can be no space between the variable name and the equals sign
+			2):There can be no semicolon at the end
+	1.2 Assign a statement to a variable
+		name=$(cat /etc/profile)
+		$name=$(cat /etc/profile) // Wrong
+	1.3 Use variables:Just prefix the variable name with $ to use a defined variable
+		echo $name
+		echo ${name}
+		echo $[name]	
+	1.4 Read only variables
+		readonly name
+	1.5 Delete a variable
+		unset name
+	1.6 Variable types
+		1):Local variable
+		2):Environment variable
+		3):Shell variable
+2. Shell string
+	2.1 Single quotation marks
+		Any character in a single quotation mark is printed as is
+		Variables in a single quotation mark are invaild
+		Escape character in a single quotation mark is invaild
+	2.2 Double quotation marks
+		You can have variables in double quotation mark
+		You can have escape characters in double quotation marks
+	2.3 String concatenation
+		1):concatenate with single quotation marks
+			your_name="runoob"
+			greeting="hello, "$your_name" !"  # right
+			greeting_1="hello, ${your_name} !" # right
+			echo $greeting  $greeting_1
+		2):concatenate with double quotation marks
+			greeting_2='hello, '$your_name' !' # right
+			greeting_3='hello, ${your_name} !' # wrong
+			echo $greeting_2  $greeting_3
+	2.4 Get the length of a string
+		string="abcd"
+		echo ${#string} #output 4  : It seems like there is only one way to get the length of a string
+	2.5 Extract substring
+		string="runoob is a great site"
+		echo ${string:1:10} # output unoob is a
+			Begin at 1(index),get 10 characters
+	2.6 Find the position of a character
+		string="runoob is a great site"
+		echo `expr index "$string" io`  # 输出4
+			return the index of the first character
+3. Array in Shell
+	3.1 Define an array
+		array_name=(value1 value1 value2 ...) 
+			The array elements are separated by the space or enter
+		array_name=(
+					value0
+					value1
+					value2
+					value3
+				)
+		array_name[0]=value0
+		array_name[1]=value1
+		array_name[n]=valuen
+	3.2 Array access
+		valuen=${array_name[1]}
+		echo ${array_name[@]}
+			You can get all elements of an array with @
+	3.3 Get the number of a array
+		length=${#array_name[@]}
+		length=${#array_name[*]}
+	3.4 Get the number of an element in an array
+		lengthn=${#array_name[n]}
+4. Pass parameters
+	echo "Shell 传递参数实例！";
+	echo "执行的文件名：$0";
+	echo "第一个参数为：$1";
+	echo "第二个参数为：$2";
+	echo "第三个参数为：$3";
+	echo "参数个数为：$#";	
+	echo "传递的参数作为一个字符串显示：$*";	
+	The difference between $* and $@
+		The same : They both are references to all parameters
+		The difference : 
+			$* : echo "-- \$* 演示 ---"
+				for i in "$*"; do
+					echo $i
+				done
+				output : 1 2 3
+			$@ : echo "-- \$@ 演示 ---"
+				for i in "$@"; do
+					echo $i
+				done
+				output : 1
+						 2
+						 3
+5. Shell Basic operators
+	5.1 The use of expr
+		val=`expr 2 + 2`
+		val=$(expr 5 + 2)
+	5.2 Arithmatic operators
+		val=$(expr $a + $b) 
+			# There must be a space $a and + and + and $b
+			val=$(expr $a +$b) #Wrong way
+			val=$(expr $a+$b)  #Wrong way
+			val=$(expr $a+ $b) #Wrong way	
+		val=`expr $a - $b`
+		val=`expr $a \* $b`  # a * b
+		val=`expr $b / $a`
+		val=`expr $b % $a`
+		if [ $a == $b ]
+		then
+		echo "a 等于 b"
+		fi
+		if [ $a != $b ]
+		then
+		echo "a 不等于 b"
+		fi
+		
+		if [ $a == $b ] # right
+		if [$a == $b ]  # wrong
+		if [ $a== $b ]  # wrong
+		if [ $a ==$b ]  # wrong
+		if [ $a == $b]  # wrong
+		if[ $a == $b ]  # wrong
+	5.3 relational operators
+		1): -eq Checks whether two numbers are equal,and returns true if they are equal.
+			if [ $a -eq $b ]
+			then
+				echo "$a -eq $b : a 等于 b"
+			else
+				echo "$a -eq $b: a 不等于 b"
+			fi	
+		2): -ne Checks whether two numbers are not equal,and returns true if they are not equal.
+			if [ $a -ne $b ]
+			then
+				echo "$a -ne $b: a 不等于 b"
+			else
+				echo "$a -ne $b : a 等于 b"
+			fi	
+		3): -gt Checks if the number on the left is greater than the number on the right,returns true if it is
+			if [ $a -gt $b ]
+			then
+				echo "$a -gt $b: a 大于 b"
+			else
+				echo "$a -gt $b: a 不大于 b"
+			fi
+		4): -lt Checks if the number on the left is smaller than the number on the right,returns true if it is
+			if [ $a -lt $b ]
+			then
+				echo "$a -lt $b: a 小于 b"
+			else
+				echo "$a -lt $b: a 不小于 b"
+			fi
+		5): -ge Checks if the number on the left is greater or equal to the number on the right,return true if it is.
+			if [ $a -ge $b ]
+			then
+				echo "$a -ge $b: a 大于或等于 b"
+			else
+				echo "$a -ge $b: a 小于 b"
+			fi	
+		6): -le Checks if the number on the left is less than or equal the number on the right,returns true if it is.
+			if [ $a -le $b ]
+			then
+				echo "$a -le $b: a 小于或等于 b"
+			else
+				echo "$a -le $b: a 大于 b"
+			fi
+	5.4 Boolean operators
+		1): ! return true if the expression are false
+			if [ $a != $b ]
+		2): -o return true if there is at least one expression are true
+			if [ $a -lt 100 -o $b -gt 100 ]
+			if [ $a -lt 5 -o $b -gt 100 ]
+		3): -a return true only if all expressions are true
+			if [ $a -lt 100 -a $b -gt 15 ]
+	5.5 Logical operators
+		1): && logical and
+			if [[ $a -lt 100 && $b -gt 100 ]]
+		2): || logical or
+			if [[ $a -lt 100 || $b -gt 100 ]]
+	5.6 String-related operators
+		1): = Determine whether the two string are equal or not,return true if they are equal
+			if [ $a = $b ]
+		2): !=
+			if [ $a != $b ]
+		3): -z Determine whether the length of a string is zero,return zero if the length is zero
+			if [ -z $a ]
+		4): -n Determine whether the length of a string is zero,return zero if the length is not zero
+			if [ -n "$a" ]
+		5): $ Determine whether the string is empty,return true if it is not empty
+			if [ $a ]
+	5.7 file-related
+		1): -b(block)      --> Determine if the file is a block device file,return true if it is
+		2): -c(character)  --> Determine if the file is a character device file,return true if it is
+		3): -d(directory)  --> Determine if the file is a directory,return true if it is
+		4): -f(file)	   --> Determine if the file is a file,return true if it is
+		5): -g(SGID)
+		6): -k(Sticky Bit)
+		7): -p(pipe)
+		8): -u(SUID)
+		9): -r(read)
+		10): -w(write)
+		11): -x(excute)
+		12): -s()          --> Determine if the file is empty,return true if it is
+		13): -e(exist)	
+6. test 
+	6.1 use of test
+		if test $num1 -eq $[num2]
+		then
+			echo '两个数相等！'
+		else
+			echo '两个数不相等！'
+		fi		
+		
+		if test $[num1] -eq $[num2]  #right
+		if test $num1 -eq $[num2]    #right 
+		if test $[num1] -eq ${num2}  #right 
+		if test $num1 -eq ${num2}    #right
+	6.2 number test
+		if test $[num1] -eq $[num2]
+		if test $[num1] -ne $[num2]
+		if test $[num1] -gt $[num2]
+		if test $[num1] -ge $[num2]
+		if test $[num1] -lt $[num2]
+		if test $[num1] -le $[num2]
+	6.3 test characters
+		if test $num1 = $num2
+		if test -z ${num3}
+	6.4 []
+		a=5; b=6
+		result=$[a+b] # There can be no Spaces on either side of the equal sign
+		echo "result 为： $result"
+	6.5 test file
+		-e : return true if it is exists
+		-r : return true if it is exists and readable
+		-w : return true if it is exists and writable
+		-x : return true if it is exists and executable
+		-d : return true if it is exists and a directory
+		-f : return true if it is exists and a file
+		if test -e ./notFile -o -e ./bash
+7. Control-of-flow statements
+	7.1 if-else
+		1): if
+			if condition
+			then
+				command1 
+				command2
+				...
+				commandN 
+			fi
+		2): if-else
+			if condition
+			then
+				command1 
+				command2
+				...
+				commandN
+			else
+				command
+			fi
+		3): if else-if else
+			if condition1
+			then
+				command1
+			elif condition2 
+			then 
+				command2
+			else
+				commandN
+			fi
+	7.2 for
+		1):syntax
+			for var in item1 item2 ... itemN
+			do
+				command1
+				command2
+				...
+				commandN
+			done
+		2):right example
+			item1=100
+			item2=200
+			item3=300
+			for var in $[item1] ${item2} $item3
+			do
+				echo $var
+			done	
+		3):wrong example
+			item1=100
+			item2=200
+			item3=300
+			for var in item1 item2 item3
+			do
+				echo $var
+			done
+		4):right example
+			for str in 'This is a string'
+			do
+				echo $str
+			done
+		5):
+			for((assignment;condition:next));do
+				command_1;
+				command_2;
+				commond_..;
+			done;
+			
+			for((i=1;i<=5;i++));do
+				echo "这是第 $i 次调用";
+			done;
+			
+			for((;$i<=5;i++));do   #right
+			for((;$i<=5;$i++));do  #wrong 
+			for((;$i<=5;let "i++"));do  #wrong
+			for(;$i<=5;i++);do     #wrong  
+	7.3 while 
+		1):syntax
+			while condition
+			do
+				command
+			done
+		2):example
+			int=1
+			while(( $int<=5 ))
+			do
+				echo $int
+				let "int++"
+			done
+			
+			while(($int<=5))     #right
+			while (($int<=5))    #right
+			while(( $int<=5))    #right
+			while(( $int <= 5))  #right
+			while(( int <= 10))  #right
+			
+			while( ( $int <= 5)) #wrong
+			let "$int++"         #wrong 
+	7.4 Infinite loop
+		1):
+			while :
+			do
+				command
+			done
+		2):
+			while true
+			do
+				command
+			done
+		3):for (( ; ; ))	
+	7.5 until
+		1):syntax:
+			until condition
+			do
+				command
+			done
+		2):example
+			a=0
+			until [ ! $a -lt 10 ]
+			do
+				echo $a
+				a=`expr $a + 1`
+			done
+			
+			a=`expr $a + 1`          #right
+			let "a++"                #right
+			a=$( expr $a + 1 )       #right
+			
+			
+	7.6 case
+		1):syntax
+			case 值 in
+			模式1)
+				command1
+				command2
+				...
+				commandN
+				;;
+			模式2）
+				command1
+				command2
+				...
+				commandN
+				;;
+			esac	
+		2):example
+			aNum="nihao"
+			case $aNum in
+				1)  echo '你选择了 1'
+				;;
+				2)  echo '你选择了 2'
+				;;
+				3)  echo '你选择了 3'
+				;;
+				"nihao")  echo '你选择了 4'
+				;;
+				*)  echo '你没有输入 1 到 4 之间的数字'
+				;;
+			esac
+	7.7 break
+		while :
+		do
+			echo -n "输入 1 到 5 之间的数字: "
+			read aNum
+			case $aNum in
+				1|2|3|4|5) echo "你输入的数字为 $aNum!"
+				;;
+				*) echo "你输入的数字不是 1 到 5 之间的!"
+					continue
+					echo "游戏结束"
+				;;
+			esac
+		done
+	7.8 		
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+if [ $1 = "1" ] ;then   #right
+if [ $1 = "1" ];then    #right
+if[ $1 = "1" ];then     #wrong  
+if [$1 = "1" ];then     #wrong 	
+if [ $1= "1" ];then     #wrong
+if [ $1 ="1" ];then     #wrong 
+if [ $1 = "1"];then		#wrong
+
+echo " arg1 = $1 "      #right
+echo "arg1= $1 "        #right 
+echo " arg1 =$1 "       #right 
+echo " arg1 = $1"       #right 
+
+vul=$(func 1)           #right
+vul=$ (func 1)          #wrong
+vul=$( func 1)          #right
+vul=$(func 1 )          #right 
+
+name="nihao"         #right
+name ="nihao"        #wrong 
+name= "nihao"        #wrong
+
+name=$(cat /etc/profile)    #right
+name =$(cat /etc/profile)   #wrong
+name= $(cat /etc/profile)   #wrong
+$name=$(cat /etc/profile)   #wrong
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

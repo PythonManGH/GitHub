@@ -1,0 +1,56 @@
+微软面试题 测试篇ZZ 
+shury 发表于 2004-12-5 12:14:00 
+
+以下测试题只有5分钟,如超过5分钟就放弃，因为超过了不会被微软录用的。　 
+
+　　　　test 1 
+
+　　　　烧一根不均匀的绳需用一个小时，如何用它来判断半个小时？ 折起来烧就是半个小时　　 
+
+　　　　test 2 　　 
+
+　　　　。。。 
+
+　　　　。。。 这个题会做 
+
+　　　　。。。 　　 
+
+　　　　请仅用一笔画四根直线，将上图9各点全部连接。　 
+
+　　　　test 3 　　 
+
+　　　　对一批编号为1~100全部开关朝上（开）的灯进行以下操作：　　 
+
+　　　　凡是1的倍数反方向拨一次开关；2的倍数反方向又拨一次开关；3的倍数反方向又拨一次开关。。。。。。 　 
+
+　　　　问：最后为关熄状态的灯的编号。 1，4，9，16，25，36，47，64，81，100关 其他都开　 
+
+　　　　微软的面试是非常严格的，录取比例大约是1/60人，看完了这些题目，大家对进入微软有没有信心　　 
+
+　　ENGLISH:　　 
+
+　　Riddles 
+
+　　* Why is a manhole cover round?　 
+
+　　* How many cars are there in the USA?　　 
+
+　　* You've got someone working for you for seven days and a gold bar to pay them. The gold bar is segmented into seven connected pieces. You must give them a piece of gold at the end of every day. If you are only allowed to make two breaks in the gold bar, how do you pay your worker? 
+
+　　* One train leaves Los Angeles at 15mph heading for New York. Another train leaves from New York at 20mph heading for Los Angeles on the same track. If a bird, flying at 25mph, leaves from Los Angeles at the same time as the train and flies back and forth between the two trains until they collide, how far will the bird have traveled?　 
+
+　　* You have two jars, 50 red marbles and 50 blue marbles. A jar will be picked at random, and then a marble will be picked from the jar. Placing all of the marbles in the jars, how can you maximize the chances of a red marble being picked? What are the exact odds of getting a red marble using your scheme?　 
+
+　　* Imagine you are standing in front of a mirror, facing it. Raise your left hand. Raise your right hand. Look at your reflection. When you raise your left hand your reflection raises what appears to be his right hand. But when you tilt your head up, your reflection does too, and does not appear to tilt his/her head down. Why is it that the mirror appears to reverse left and right, but not up and down? 　　 
+
+　　* You have 4 jars of pills. Each pill is a certain weight, except for contaminated pills contained in one jar, where each pill is weight + 1. How could you tell which jar had the contaminated pills in just one measurement?　 
+
+　　* If you had an infinite supply of water and a 5 quart and 3 quart pail, how would you measure exactly 4 quarts?　 
+
+　　* You have a bucket of jelly beans. Some are red, some are blue, and some green. With your eyes closed, pick out 2 of a like color. How many do you have to grab to be sure you have 2 of the same?　 
+
+　　* Which way should the key turn in a car door to unlock it?　 
+
+　　* If you could remove any of the 50 states, which state would it be and why? 
+ 
+ 

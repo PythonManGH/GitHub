@@ -1,0 +1,8 @@
+1. IndexError: boolean index did not match indexed array along dimension 0; dimension is 3 but corresponding boolean dimension is 2
+    这个错误的原因还不知道
+    源代码如下：
+        index1 = matrix[1:3 ,1:3] == 5
+        print(matrix[index1])
+    解决如下：
+        index1 = matrix[1:3 ,1:3] == 5
+        print(matrix[1:3 ,1:3][index1])

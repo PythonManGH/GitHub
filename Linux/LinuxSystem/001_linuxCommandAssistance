@@ -1,0 +1,111 @@
+1. Command format : COMMAND [OPTIONS...] [ARGUMENTS...]
+	1.1 Built-in commands : help COMMAND
+		You can get the command assistance of a built-in command by the command of help
+		[root@localhost ~]# help cd
+
+	1.2 External commands : 
+		(1) COMMAND --help/-h : Each external command comes with a brief summary,and you can get it by the option of --help/-h.
+		(2) man COMMAND : Every command on linux comes with a user manual
+		(3) info COMMAND :
+		(4) The help document of the program itself.
+		(5) Official documentation of the program.
+
+	1.3 How to distinguish between built-in commands and external commands.
+		type COMMAND
+		[root@localhost ~]# type cd
+			cd is a shell builtin
+
+2. Environment variables on Linux
+	2.1 [root@localhost ~]# echo $SHELL
+		$SHELL : current shell of your system
+	2.2 [root@localhost ~]# echo $PATH
+		$PATH : The search path of system commands(Executable files).
+	2.3 PWD ：the current working directory
+	2.4	OLDPWD ：the previous working directory		
+
+3. hash : Remember and display program locations
+	Commands used the first time will be stored in memory as key-value pairs，hash display how many commands you used and
+		how many times you used a command.
+	
+4. Common commands
+	4.1 date : Display the current time in the given FORMAT, or set the system date 
+	4.2 directory-related : 
+		cd : Change the shell working directory
+			#cd           -> Change to the home directory of the current user
+			#cd ~username -> Change to the home directory of the specified user(Only administrators have this permission)
+			#cd ~         -> Change to the home directory of the current user(The same as #cd)
+			#cd -         -> Toggle back and forth between the previous directory and the current directory
+		related environment variables :
+			PWD           -> the current working directory
+			OLDPWD        -> the previous working directory	
+			#cd - and #cd $OLDPWD are the same
+	4.3 ls : List imformation about the FILES(the current working directory by default)
+		-lh : Always used together,-h : print size in human readable format
+			-rw-r--r--. 1 root root  294 Jun 26 21:48 compile
+			0123456789  a b    c     d   e            f  
+				0 : The file type
+					- : Regular file		
+					d : Directory
+					l : Linked file	
+					b : Block device
+					c : Character device
+					p : Pipe
+					s : Socket 
+				1~9 : Permissions to a file	
+				a : Number of times files have been hard linked
+				b : The owner of the file
+				c : The group of the file
+				d : The size of the file
+				e : The last time the file was modified
+				f : file name
+		-d : List directories themselives,not their contents
+	4.4 stat : Display file or file system status / Gets the matedata for the specified file
+	4.5 echo : Display l line of text;
+		The difference between '' and ""
+			'' : Strong reference : Variables are not replaced
+			"" : Weak referencd : Variables are replace	
+			$ echo '$PATH'	
+				$PATH
+			$ echo "$PATH"
+				/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/PythonMan/.local/bin:/home/PythonMan/bin
+			$ echo $PATH
+				/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/PythonMan/.local/bin:/home/PythonMan/bin
+	4.6 which : Show the full path of commands
+	4.7 whereis : Locate the binary,source,and manual page files for a command
+	4.8 whatis : Search the whatis database for complete words
+5. Common Configuration Files
+	5.1 Configure Network Card information
+		/etc/sysconfig/network-scripts/ifcfg-eth0	
+			ONBOOT=yes  -->  
+			BOOTPROTO=static  -->  Configure IP address by yourself
+			IPADDR=192.168.1.100
+			GATEWAY=192.168.112.2
+			DNS1=192.168.112.2
+	5.2 Modify host name
+		/etc/sysconfig/network
+6. Commands to view files
+	6.1 cat : Concatenate files and print on the standard output
+		syntax : #cat file1 file2
+		disadvantage : Can not turn over the screen
+	6.2 tac : Concatenate and print files in reverse
+	6.3 file : Determine file type
+7. Shutdown and Restart commands	
+	Shutdown : halt,poweroff,shutdown,init 0
+	Restart : reboot,init 6
+	Login Related : 
+		who : Show who is logged on
+		whoami ： Print effective userid
+		w ： Show who is logged on and what they doing
+8. Linux file system	
+	
+			 
+
+
+
+-l : long
+-r : reverse
+-R : recursive
+-d : directory
+-h : human readable
+-a : all
+

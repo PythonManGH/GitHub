@@ -1,0 +1,7 @@
+ZeroMQ搞死人的细节
+	1. 发布订阅：一定要设置消息过滤，否则接受不到消息
+		zmq_setsockopt(mpSocket, ZMQ_SUBSCRIBE, mpFilter, 0);  且最后一个参数要设置为0，不要设置为1 我不知道为什么
+	2. 请求应答：如果你要使用自定义装置，且使用了s_send和s_recv一定要在connect之前s_set_id();
+	3. 多线程之间通信最好使用同一个context
+	4. 多个zmq实例使用同一个context时，一定要记住在外面创建的context一定要在外面删除
+	

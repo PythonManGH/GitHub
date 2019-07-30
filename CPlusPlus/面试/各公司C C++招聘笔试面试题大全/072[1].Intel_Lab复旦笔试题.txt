@@ -1,0 +1,52 @@
+Intel Lab复旦笔试题（zz from sjtu） 
+shury 发表于 2004-12-6 14:23:00 
+
+大题
+1。写出下列信号的奈亏斯特频率
+（1）f（t）＝1＋cos（2000pait）＋sin（4000pait）
+（2）f(t)=sin(4000pait)/pait
+(3)f(t)=(sin(4000pait)的平方)/pait
+2.填程序
+把一个计算m^n的程序填充完整
+大概的意思是：
+有一个全局数组char s[BUFSIZE]
+利用这个数组计算，就是每个单元存放计算结果的一位，index小的存放低位，index大
+的存放高位
+3。有两个线程
+void producer()
+{
+    while(1)
+    {
+        GeneratePacket();
+        PutPacketIntoBuffer();
+        Signal(customer);
+    }
+}
+void customer()
+{
+    while(1)
+    {
+        WaitForSignal();
+        if(PacketInBuffer>10)
+        {
+            ReadAllPackets();
+            ProcessPackets();
+        }
+    }
+}
+（1）有没有其他方法可以提高程序的性能
+（2）可不可以不使用信号之类的机制来实现上述的功能
+4。优化下面的程序
+(0)sum=0
+(1)I=1
+(2)T1＝4*I
+(3)T2=address(A)-4
+(4)T3=T2[T1]
+(5)T4=address(B)-4
+(6)T5=4*I
+(7)T6=T4[T5]
+(8)T7=T3*T5
+(9)sum=sum+T6
+(10)I=I+1
+(10)IF I<20 GOTO (2) 
+ 

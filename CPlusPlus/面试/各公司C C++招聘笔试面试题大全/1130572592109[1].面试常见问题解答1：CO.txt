@@ -1,0 +1,102 @@
+面试常见问题解答1：CObject类中的析构函数为什么是虚函数ZZ 
+shury 发表于 2004-12-7 20:24:00 
+
+　[宝宝提供的答案仅供参考，如有不对欢迎指正] 
+面试SE时，很多公司喜欢问到虚函数相关。宝宝有一次被问到，CObject类中的析构函数为什么是虚函数，不懂。后来上网查到了答案，特贴上来与大家分享
+
+MFC类库中，CObject类的重要性不言自明的。在CObject的定义中，我们 
+看到一个有趣的现象，即CObject的析构函数是虚拟的。 
+
+在AFX.H中，CObject的定义： 
+
+class CObject 
+{ 
+   public: 
+// Object model (types, destruction, allocation) 
+    
+   virtual CRuntimeClass* GetRuntimeClass() const; 
+   virtual ~CObject(); //virtual destructors are necessary 
+    
+   ... 
+   ... 
+}; 
+
+为什么MFC的编写者认为virtual destructors are necessary 
+(虚拟的析构函数是必要的)? 
+
+在著名的VC教程 "精通Visual C++ for Windows 95/NT"(电子工业版， 
+1997年5月版，胡俭，丘宗明等著)第99页中有这样一段话： 
+
+“如果CObject的析构函数不是虚拟的，派生类就不会自动地得到虚拟的 
+  析构函数，当对象撤消时就会带来问题——只有当前类的析构函数得到 
+  调用而基类的析构函数就得不到调用。...” 
+  
+我认为这段解释是这本很不错的书中一个不应出现的严重错误。其意思是说： 
+若： 
+class CBase 
+{ 
+   public: 
+      ~CBase() { ... }; 
+   ... 
+}; 
+
+class CChild : public CBase 
+{ 
+   public: 
+      ~CChild() { ... }; 
+   ... 
+}; 
+
+main() 
+{ 
+   Child c; 
+   ... 
+   return 0; 
+} 
+
+上段代码在运行时，当栈框中的自动对象 c 被撤消时，只调用~CChild()， 
+而不调用~CBase()。 
+
+我想但凡对C++继承性理论有所了解的人都会立刻指出这是错误的。 
+
+由于在生成CChild对象c时，实际上在调用CChild类的构造函数之前必须首先 
+调用其基类CBase的构造函数，所以当撤消c时，也会在调用CChild类析构函数 
+之后，调用CBase类的析构函数(析构函数调用顺序与构造函数相反)。也就是说，
+
+无论析构函数是不是虚函数，派生类对象被撤消时，肯定会依次上调其基类的 
+析构函数。 
+
+那么为什么CObject类要搞一个虚的析构函数呢？ 
+
+仍以上面代码为例，如果main()中有如下代码： 
+... 
+
+CBase * pBase; 
+CChild c; 
+pBase = &c; 
+
+... 
+
+
+那么在、当pBase指针被撤消时，调用的是CBase的析构函数还是CChild的呢？ 
+显然是CBase的(静态联编)。但如果把CBase类的析构函数改成virtual型，当 
+pBase指针被撤消时，就会先调用CChild类构造函数，再调用CBase类构造函数。
+
+
+在这个例子里，所有对象都存在于栈框中，当离开其所处的作用域时，该对象 
+会被自动撤消，似乎看不出什么大问题。但是试想，如果CChild类的的构造函数
+
+在堆中分配了内存，而其析构函数又不是virtual型的，那么撤消pBase时，将不
+会 
+调用CChild::~CChild(), 从而不会释放CChild::CChild()占据的内存，造成内存
+
+泄露。 
+
+而将CObject的析构函数设为virtual型，则所有CObject类的派生类的析构函数都
+将 
+自动变为virtual型，这保证了在任何情况下，不会出现由于析构函数未被调用而
+导致 
+的内存泄露。这才是MFC将CObject::~CObject()设为virtual型的真正原因。 
+
+ 
+ 

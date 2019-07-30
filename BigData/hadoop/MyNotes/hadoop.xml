@@ -1,0 +1,78 @@
+1. What is hadoop?
+	Hadoop is a distributed system architecture developed by the Apache foundation.
+	Hadoop is mainly used to solve the storage,analysis and calculation of massive data.
+		storage:HDFS
+		analysis and calculation : mapReduce
+	Broadly speaking,Hadoop generally refers to a broader concept -- the Hadoop ecosystem
+2. Three released versions of Hadoop
+		Apache : The original(most basic) version. Best for beginners.
+		Cloudera : It's widely used in large Internet enterprises.
+		Hortorworks : The document is better.
+3. Advantages of the Hadoop
+	1) High reliability : Because Hadoop consumes that computing elements and storage will fail,
+		Because it maintains multiple copies of working data.Failed nodes can be redistributed in the event of failure.
+	2) High scalability : Assignning task data between cluster makes it easy to extend thousands of nodes. 
+	3) High efficiency : In the context of MapReduce,Hadoop works in parallel to speed up task processing.
+	4) High fault-tolerant : Automatically save multiple copies of data,and automatically redistribute failed tasks.
+4. Compoents of Hadoop
+	1) HDFS--Hadoop Distributed File System
+		A highly reliable,high throughput distrubuted file system
+	2) YARN--Yet Another Resource Negotiator
+		A framework for job scheduling and cluster resource management
+	3) MapReduce
+		A distributed framework for offline parallel computing.
+	4) Hadoop Common
+		Tool module that supports other modles
+5. Overview of HDFS architecture
+	1) NameNode(nn) : Store metadata of files,such as file name,file directory structure,
+		file properties(generation time,number of copies,file permissions),as well as the block list of each file and 
+		DataNode where the block is located.
+	2) DataNode(n) : Store file block data and checksum of block data on local file system.
+	3) Secondary NameNode(2nn) : To assist the NameNode
+6. Overview of YARN architecture	
+	1) ResourceManager(rm) : 
+		Process client requests;
+		Start/Monitor ApplicationMaster;
+		Monitor NodeManager;
+		Resource allocation and scheduling;
+	2) NodeManager(nm) : 
+		Resource management on a single Node;		
+		Handle the commands from ResourceManager;
+		Handle the commands from ApplicationMaster;
+	3) 
+7. configuration files
+	1):core-site.xml 
+		Specify the address of NameNode of HDFS
+		Specify the directory of files generated after run hadoop
+	2):HDFS-related
+		hadoop-env.sh
+			config JAVA_HOME	
+		hdfs-site.xml
+			Config the number of replication
+			Specify the address of SecondaryNameNode of HDFS
+		slaves
+			Config all hostname
+	3):YARN-related	
+		yarn-env.sh
+			config JAVA_HOME
+		yarn-site.xml
+			The way reducer get datas --> the address of notemanager
+			The address of resourcemanager
+	4):MapReduce-related
+		mapred-env.sh	
+			config JAVA_HOME
+		mapred-site.xml
+			Specify mapreduce running on YARN
+8. The step to start cluster
+	1):format namenode
+		bin/hdfs namenode -format
+	2):start hdfs
+		sbin/start-dfs.sh
+		sbin/stop-dfs.sh
+	3):stop yarn
+		sbin/stop-yarn.sh
+9. Clear cluster
+	1):sbin/stop-dfs.sh
+	2):rm -rf /opt/module/hadoop2.7.2/data /opt/module/hadoop2.7.2/logs
+	
+

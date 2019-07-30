@@ -1,0 +1,69 @@
+笔试中常考到的指针问题ZZ 
+shury 发表于 2004-12-9 15:12:00 
+
+＃i nclude <iostream> 
+＃i nclude <malloc.h> 
+using namespace std; 
+
+void GetMemory(char *p,int num) 
+{ 
+p=(char*)malloc(sizeof(char)*num); 
+} 
+
+void test(void) 
+{ 
+char* str=NULL; 
+GetMemory(str,100); //str仍然为NULL 
+strcpy(str,"hello");     //运行错误 
+} 
+
+void GetMemory2(char **p,int num) 
+{ 
+*p=(char*)malloc(sizeof(char)*num); 
+} 
+
+void test2(void) 
+{ 
+char *str=NULL; 
+GetMemory2(&str,100); 
+strcpy(str,"hello"); 
+cout<<str<<endl; 
+free(str); 
+} 
+
+char *GetMemory3(int num) 
+{ 
+char* p=(char*)malloc(sizeof(char)*num); 
+return p; 
+} 
+
+void test3(void) 
+{ 
+char* str=NULL; 
+str=GetMemory3(100); 
+strcpy(str,"hello"); 
+cout<<str<<endl; 
+free(str); 
+} 
+
+char* GetString(void) 
+{ 
+char p[]="hello world";    //位于堆栈内存 
+return p; 
+} 
+
+void test4(void) 
+{ 
+char* str=NULL; 
+str=GetString();        //str的内容是垃圾 
+cout<<str<<endl; 
+} 
+
+void main(void) 
+{ 
+// test();      
+// test2(); 
+// test3(); 
+test4(); 
+} 
+ 

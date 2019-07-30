@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>发布订阅</string>
+    </property>
+    <addaction name="actionPubSub01"/>
+    <addaction name="actionPubSub02"/>
+    <addaction name="actionPs02"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>特殊算法和思想</string>
+    </property>
+    <addaction name="action_zmq_poll"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>请求应答</string>
+    </property>
+    <addaction name="actionReq_rep_01"/>
+    <addaction name="actionReq_rep_02"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionPubSub01">
+   <property name="text">
+    <string>最简单的发布订阅</string>
+   </property>
+  </action>
+  <action name="actionPubSub02">
+   <property name="text">
+    <string>有中间装置的发布订阅</string>
+   </property>
+  </action>
+  <action name="action_zmq_poll">
+   <property name="text">
+    <string>从多个套接字中接收消息zmq_poll</string>
+   </property>
+  </action>
+  <action name="actionReq_rep_01">
+   <property name="text">
+    <string>简单的请求应答</string>
+   </property>
+  </action>
+  <action name="actionReq_rep_02">
+   <property name="text">
+    <string>简易请求-应答代理</string>
+   </property>
+  </action>
+  <action name="actionPs02">
+   <property name="text">
+    <string>发布-订阅消息信封</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

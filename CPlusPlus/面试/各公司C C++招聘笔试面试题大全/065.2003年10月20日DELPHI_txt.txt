@@ -1,0 +1,60 @@
+2003年10月20日DELPHI的笔试题ZZ 
+shury 发表于 2004-12-6 14:08:00 
+
+德尔福的笔试试题（20日19：45，成电）
+
+德尔福集团是全球最大的汽车系统和零部件生产制造商, 为客户提供品种齐全的汽车
+系统, 零部件和模块。今天成电的就业办老师介绍说，德尔福是汽车界的华为，从来不在
+媒体上打广告。
+ 
+大家看看从美国空运过来的笔试题目
+ 
+1、Name 3 Vehicle Buses.
+ 
+2、Name 2 possible sources of Electromagnetic interference on Electronics Circ
+uit ASM.
+ 
+3、Wavelength for 12MHz frequency signal is____
+ 
+4、Name 2 important considerations for car radio performance related to audio
+signal processing under multipath condition?
+ 
+5、What is the typical FM receiver RF signal strength to achieve 30dB S/N for
+car radio?
+
+
+ 
+6、When a radio is tuned to 98.1 MHz & with a LO of 108.8 MHz, what is the ima
+ge frequency?
+ 
+7、For a system with a matched impedance, what is the Reflection Coefficient a
+nd SWR?
+ 
+8、Which property of the output capacitor is the primary cause of Low Drop Out
+(LDO) regulator loop instability?
+  a) Equivalent series resistance(ESR)
+  b) Effective series inductance(ESL)
+  c) Capacitance value
+  d) Dielectric material
+ 
+9、The switching regulator is capable of:
+  a) Higher power conversion efficiency
+  b) Providing an output voltage that is higher than the input
+  c) Generating an output boltage oppsite in polarity to the input
+  d) All of the above
+ 
+10、A linear regulator op*(没抄清楚)
+  Vin(max)=10v,Vout(min)=4.8v,Iout(max)=2.5mA,Iq(max)=2.5mA,Ta(max)=8.5摄氏度，
+
+
+  The regulator is available in 3 packages.Each package has the following ther
+mal characteristics:
+Package            Rja(摄食度/W)           Rjc(摄食度/W)
+TO220                 50                        35
+SO14                  125                       30
+D1P8                  100                       52
+    Choose the most suitable package to handle the power dissipation requireme
+nt without a heat sink and why.
+
+ 
+ 

@@ -1,0 +1,3 @@
+g++ lruqueue.cpp -g -fPIC -I/work/project/Linux/ZeroMQ/ZeroMQ_lib/zeromq-4.1.6/include -L/work/project/Linux/ZeroMQ/ZeroMQ_lib/lib -lzmq -lpthread -o lru
+
+g++ lru.cpp -g -fPIC -I/work/project/Linux/ZeroMQ/ZeroMQ_lib/zeromq-4.1.6/include -L/work/project/Linux/ZeroMQ/ZeroMQ_lib/lib -lzmq -o lur

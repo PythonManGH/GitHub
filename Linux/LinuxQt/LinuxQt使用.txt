@@ -1,0 +1,41 @@
+//这是编译Qt项目最基本的步骤
+	qmake -project
+	qmake xxx.pro (如果这里有唯一的.pro文件，则可以直接qmake)
+	make
+	
+	make clean 
+// *.pro文件
+	TEMPLATE
+		app -> 表示应用程序
+		lib -> 库 是动态库还是静态库取决于 CONFIG的配置
+	SOURCES
+		SOURCES=cpp文件 cpp文件 cpp文件 cpp文件
+		
+		SOURCES+=*.cpp
+		SOURCES+=*.cpp
+	HEADERS=
+		HEADERS=*.h *.h *.h
+		HEADERS+=*.h
+	FORMS=
+		FORMS=*.ui *.ui *.ui
+		
+	CONFIG=  影响gcc的选项
+		release
+		debug
+		warn_on | warn_off
+		qt -> 自动添加Qt库
+		shared 动态库 
+		static 静态库
+	QT=(该变量在CONFIG=qt时才有用) 用来指定哪些模块
+		core
+		gui
+		sql
+		xml
+		network
+	TARGET=
+		输出文件名(-o输出文件)
+	LIBS= 用户指定库
+		LIBS=-L.
+uic :
+	uic login.ui -o login.h
+	

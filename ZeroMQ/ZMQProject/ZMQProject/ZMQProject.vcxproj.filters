@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{f99dff56-b587-4701-a1e9-e26c81d72084}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{1c51afcd-3603-4825-b2b8-ec4f3c622699}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="ZMQ">
+      <UniqueIdentifier>{be117f21-e39d-4d0c-8a57-f7bb225a2f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{0376dc34-5dd8-4701-b2e0-2c9fc6f56b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business">
+      <UniqueIdentifier>{69f67442-676e-42fa-abea-13bad30057a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\PubSub">
+      <UniqueIdentifier>{054ef596-525a-4b14-ab99-24f0cd2d2fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\PubSub\PS01_Begin">
+      <UniqueIdentifier>{6ff6e6d6-e2fd-43bb-a131-535ed82aea98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{ff6ad585-f6f9-4642-9430-52f99c5b81d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\Ideals">
+      <UniqueIdentifier>{638c31ba-907a-4518-a448-aeb4c58e55d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\Ideals\ZmqPoll">
+      <UniqueIdentifier>{dbbc1478-2ed7-45fa-882a-70cadb351338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\PubSub\PS01_Device">
+      <UniqueIdentifier>{81ff0f80-1f0c-4406-9998-a5b678df0ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\ReqRep">
+      <UniqueIdentifier>{1ebbaf20-39e0-4572-9533-5f133c1dae78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\ReqRep\RR01">
+      <UniqueIdentifier>{151ff204-e20e-449f-8767-6b106a54969b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\ReqRep\RR02_Device">
+      <UniqueIdentifier>{9ed5aef5-f71e-4445-bbae-67d5fbd9f64f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Business\PubSub\PS_Envelop">
+      <UniqueIdentifier>{75960b0f-c47c-4430-8b42-7a789361f844}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="code\MainWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZMQClient.cpp">
+      <Filter>ZMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZMQServer.cpp">
+      <Filter>ZMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PSDialog.cpp">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PSDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PSDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PS01Server.cpp">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PS01Server.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PS01Server.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PS01Client.cpp">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PS01Client.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PS01Client.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZMQBase.cpp">
+      <Filter>ZMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ZPDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ZPDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZPDialog.cpp">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ZPServerPub.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ZPServerPub.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZPServerPub.cpp">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ZPServerRep.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ZPServerRep.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZPServerRep.cpp">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ZPClient.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ZPClient.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZPClient.cpp">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PSDeviceDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PSDeviceDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PSDeviceDialog.cpp">
+      <Filter>Business\PubSub\PS01_Device</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PSDevice.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PSDevice.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PSDevice.cpp">
+      <Filter>Business\PubSub\PS01_Device</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RRDialog01.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RRDialog01.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\RRDialog01.cpp">
+      <Filter>Business\ReqRep\RR01</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RRClient.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RRClient.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\RRClient.cpp">
+      <Filter>Business\ReqRep</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RRServer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RRServer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\RRServer.cpp">
+      <Filter>Business\ReqRep</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RRDialogDevice.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RRDialogDevice.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\RRDialogDevice.cpp">
+      <Filter>Business\ReqRep\RR02_Device</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZMQPSDevice.cpp">
+      <Filter>ZMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="code\ZMQRRDevice.cpp">
+      <Filter>ZMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RRDevice.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RRDevice.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\RRDevice.cpp">
+      <Filter>Business\ReqRep</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PSEnvelopeDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PSEnvelopeDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PSEnvelopeDialog.cpp">
+      <Filter>Business\PubSub\PS_Envelop</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PSClient.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PSClient.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PSClient.cpp">
+      <Filter>Business\PubSub</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PSServer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PSServer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\PSServer.cpp">
+      <Filter>Business\PubSub</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMQRRLRUDevice.cpp">
+      <Filter>ZMQ</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RRLRUDevice.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RRLRUDevice.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="code\RRLRUDevice.cpp">
+      <Filter>Business\ReqRep</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainWindow.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\MainWindow.h">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\MainWindow.ui">
+      <Filter>UI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSDialog.h">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSDialog.ui">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PS01Server.h">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PS01Client.h">
+      <Filter>Business\PubSub\PS01_Begin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\ZPDialog.ui">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\ZPDialog.h">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\ZPServerPub.h">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\ZPServerRep.h">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\ZPClient.h">
+      <Filter>Business\Ideals\ZmqPoll</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSDeviceDialog.ui">
+      <Filter>Business\PubSub\PS01_Device</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSDeviceDialog.h">
+      <Filter>Business\PubSub\PS01_Device</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSDevice.h">
+      <Filter>Business\PubSub\PS01_Device</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRDialog01.h">
+      <Filter>Business\ReqRep\RR01</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRDialog01.ui">
+      <Filter>Business\ReqRep\RR01</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRClient.h">
+      <Filter>Business\ReqRep</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRServer.h">
+      <Filter>Business\ReqRep</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRDialogDevice.h">
+      <Filter>Business\ReqRep\RR02_Device</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRDialogDevice.ui">
+      <Filter>Business\ReqRep\RR02_Device</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRDevice.h">
+      <Filter>Business\ReqRep</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSEnvelopeDialog.ui">
+      <Filter>Business\PubSub\PS_Envelop</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSEnvelopeDialog.h">
+      <Filter>Business\PubSub\PS_Envelop</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSClient.h">
+      <Filter>Business\PubSub</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\PSServer.h">
+      <Filter>Business\PubSub</Filter>
+    </CustomBuild>
+    <CustomBuild Include="code\RRLRUDevice.h">
+      <Filter>Business\ReqRep</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_MainWindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="code\ZMQClient.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="code\ZMQServer.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_PSDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="code\BaseDefine.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="code\ZMQBase.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_ZPDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_PSDeviceDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_RRDialog01.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_RRDialogDevice.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="code\ZMQPSDevice.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="code\ZMQRRDevice.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_PSEnvelopeDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMQRRLRUDevice.h">
+      <Filter>ZMQ</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

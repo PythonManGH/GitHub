@@ -1,0 +1,180 @@
+C面试时的读程序题ZZ 
+shury 发表于 2004-12-5 17:50:00 
+
+What will print out? 
+main() 
+{ 
+        char *p1=“name”; 
+        char *p2; 
+        p2=(char*)malloc(20); 
+        memset (p2, 0, 20); 
+        while(*p2++ = *p1++); 
+        printf(“%sn”,p2); 
+
+} 
+
+Answer:empty string. 
+
+What will be printed as the result of the operation below:
+
+main() 
+{ 
+    int x=20,y=35; 
+    x=y++ + x++; 
+    y= ++y + ++x; 
+    printf(“%d%dn”,x,y); 
+} 
+
+Answer : 5794 
+
+What will be printed as the result of the operation below:
+
+main() 
+{ 
+    int x=5; 
+    printf(“%d,%d,%dn”,x,x< <2,x>>2); 
+}
+
+Answer: 5,20,1 
+
+What will be printed as the result of the operation below:
+
+#define swap(a,b) a=a+b;b=a-b;a=a-b; 
+void main()
+{ 
+    int x=5, y=10; 
+    swap (x,y); 
+    printf(“%d %dn”,x,y); 
+    swap2(x,y); 
+    printf(“%d %dn”,x,y); 
+} 
+
+int swap2(int a, int b) 
+{ 
+    int temp; 
+    temp=a; 
+    b=a; 
+    a=temp; 
+    return 0; 
+
+} 
+
+Answer: 10, 5
+10, 5 
+
+What will be printed as the result of the operation below:
+
+main()
+{ 
+    char *ptr = ” Cisco Systems”; 
+    *ptr++; printf(“%sn”,ptr); 
+    ptr++; 
+    printf(“%sn”,ptr); 
+} 
+
+Answer:Cisco Systems
+isco systems 
+
+What will be printed as the result of the operation below:
+
+main()
+{ 
+    char s1[]=“Cisco”; 
+    char s2[]= “systems”; 
+    printf(“%s”,s1); 
+} 
+Answer: Cisco 
+
+What will be printed as the result of the operation below:
+
+main()
+{ 
+    char *p1; 
+    char *p2; 
+    p1=(char *)malloc(25); 
+    p2=(char *)malloc(25); 
+
+    strcpy(p1,”Cisco”); 
+    strcpy(p2,“systems”); 
+    strcat(p1,p2); 
+
+    printf(“%s”,p1); 
+
+} 
+
+Answer: Ciscosystems 
+
+The following variable is available in file1.c, who can access it?:
+
+static int average;
+
+Answer: all the functions in the file1.c can access the variable. 
+
+WHat will be the result of the following code?
+
+#define TRUE 0 // some code 
+while(TRUE) 
+{ 
+
+    // some code 
+
+} 
+
+Answer: This will not go into the loop as TRUE is defined as 0. 
+
+What will be printed as the result of the operation below:
+
+int x; 
+int modifyvalue() 
+{ 
+    return(x+=10); 
+} 
+int changevalue(int x) 
+{ 
+    return(x+=1); 
+} 
+
+void main()
+{ 
+    int x=10; 
+    x++; 
+    changevalue(x); 
+    x++; 
+    modifyvalue(); 
+    printf("First output:%dn",x); 
+
+    x++; 
+    changevalue(x); 
+    printf("Second output:%dn",x); 
+    modifyvalue(); 
+    printf("Third output:%dn",x); 
+
+} 
+
+Answer: 12 , 13 , 13 
+
+What will be printed as the result of the operation below:
+
+main()
+{ 
+    int x=10, y=15; 
+    x = x++; 
+    y = ++y; 
+    printf(“%d %dn”,x,y); 
+} 
+
+Answer: 11, 16 
+
+What will be printed as the result of the operation below:
+
+main()
+{ 
+    int a=0; 
+    if(a==0) 
+        printf(“Cisco Systemsn”); 
+        printf(“Cisco Systemsn”); 
+} 
+
+Answer: Two lines with “Cisco Systems” will be printed. 
+ 
+ 

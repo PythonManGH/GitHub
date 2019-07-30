@@ -1,0 +1,270 @@
+C++ object-oriented questionsZZ 
+shury ·¢±íÓÚ 2004-12-5 17:40:00 
+
+Q. What is pure virtual function? 
+A class is made abstract by declaring one or more of its virtual functions to be pure. A pure virtual function is one with an initializer of = 0 in its declaration
+
+Q. Write a Struct Time where integer m, h, s are its members 
+struct Time 
+{ 
+int m; 
+int h; 
+int s; 
+};
+
+how do you traverse a Btree in Backward in-order? 
+Process the node in the right subtree 
+Process the root 
+Process the node in the left subtree
+
+Q. What is the two main roles of Operating System? 
+As a resource manager 
+As a virtual machine
+
+Q. In the derived class, which data member of the base class are visible? 
+In the public and protected sections.
+
+What is a modifier? 
+A modifier, also called a modifying function is a member function that
+changes the value of at least one data member. In other words, an
+operation that modifies the state of an object. Modifiers are also
+known as ¡®mutators¡¯. Example: The function mod is a modifier in the
+following code snippet: 
+
+class test
+{
+    int x,y;
+    public:
+     test()
+     {
+         x=0; y=0;
+     }
+ void mod()
+     {
+        x=10;
+        y=15;
+     }
+};
+
+
+What is an accessor? 
+An accessor is a class operation that
+does not modify the state of an object. The accessor functions need to
+be declared as const operations 
+
+Differentiate between a template class and class template. 
+Template class: A generic definition or a parameterized class not
+instantiated until the client provides the needed information. It¡¯s
+jargon for plain templates. Class template: A class template specifies
+how individual classes can be constructed much like the way a class
+specifies how individual objects can be constructed. It¡¯s jargon for
+plain classes. 
+
+When does a name clash occur? 
+A name clash occurs when a name is defined in more than one place. For example., two
+different class libraries could give two different classes the same
+name. If you try to use many class libraries at the same time, there is
+a fair chance that you will be unable to compile or link the program
+because of name clashes. 
+
+Define namespace. It is a feature in C++ to
+minimize name collisions in the global name space. This namespace
+keyword assigns a distinct name to a library that allows other
+libraries to use the same identifier names without creating any name
+collisions. Furthermore, the compiler uses the namespace signature for
+differentiating the definitions. 
+
+What is the use of ¡®using¡¯ declaration.
+A using declaration makes it possible to use a name from a namespace without the scope operator. 
+
+What is an Iterator class? 
+A class that is used to traverse through the objects maintained by a container class. There are
+five categories of iterators: input iterators, output iterators,
+forward iterators, bidirectional iterators, random access. An iterator
+is an entity that gives access to the contents of a container object
+without violating encapsulation constraints. Access to the contents is
+granted on a one-at-a-time basis in order. The order can be storage
+order (as in lists and queues) or some arbitrary order (as in array
+indices) or according to some ordering relation (as in an ordered
+binary tree). The iterator is a construct, which provides an interface
+that, when called, yields either the next element in the container, or
+some value denoting the fact that there are no more elements to
+examine. Iterators hide the details of access to and update of the
+elements of a container class.
+The simplest and safest iterators are those that permit read-only access to the contents of a container class. 
+List out some of the OODBMS available. GEMSTONE/OPAL
+of Gemstone systems, ONTOS of Ontos, Objectivity of Objectivity Inc,
+Versant of Versant object technology, Object store of Object Design,
+ARDENT of ARDENT software, POET of POET software. 
+List out some of the object-oriented methodologies. 
+Object Oriented Development (OOD) (Booch 1991,1994), 
+Object Oriented Analysis and Design (OOA/D) (Coad and Yourdon 1991), 
+Object Modelling Techniques (OMT) (Rumbaugh 1991), 
+Object Oriented Software Engineering (Objectory) (Jacobson 1992), O
+bject Oriented Analysis (OOA)(Shlaer and Mellor 1992), 
+The Fusion Method (Coleman 1991).
+ 
+What is an incomplete type? 
+Incomplete types refers to pointers in which there is non availability of the
+implementation of the referenced location or it points to some location
+whose value is not available for modification. 
+
+ int *i=0x400  // i points to address 400
+ *i=0;        //set the value of memory location pointed by i.
+
+Incomplete types are otherwise called uninitialized pointers.
+
+What is a dangling pointer?
+A dangling pointer arises when you use the address of an object after
+its lifetime is over. This may occur in situations like returning
+addresses of the automatic variables from a function or using the
+address of the memory block after it is freed. The following
+code snippet shows this: 
+
+class Sample
+{
+public:
+        int *ptr;
+        Sample(int i)
+        {
+         ptr = new int(i);
+        }
+         ~Sample()
+        {
+         delete ptr;
+        }
+        void PrintVal()
+        {
+         cout << ¡°The value is ¡± << *ptr;
+        }
+};
+ void SomeFunc(Sample x)
+{
+ cout << ¡°Say i am in someFunc ¡± << endl;
+}
+ int main()
+{
+ Sample s1 = 10;
+ SomeFunc(s1);
+ s1.PrintVal();
+}
+
+In the above example when PrintVal() function is
+called it is called by the pointer that has been freed by the
+destructor in SomeFunc. 
+
+Differentiate between the message and method.
+Message: 
+
+Objects communicate by sending messages to each other. 
+A message is sent to invoke a method. 
+Method Provides response to a message. 
+It is an implementation of an operation. 
+
+What is an adaptor class or Wrapper class?
+A class that has no functionality of its own. Its member functions hide
+the use of a third party software component or an object with the
+non-compatible interface or a non-object-oriented implementation. 
+
+What is a Null object? 
+It is an object of some class whose purpose is to indicate that a real object of that class
+does not exist. One common use for a null object is a return value from
+a member function that is supposed to return an object with some
+specified properties but cannot find such an object. 
+
+What is class invariant? 
+A class invariant is a condition that defines all valid states for an object. It is a logical
+condition to ensure the correct working of a class. Class invariants
+must hold when an object is created, and they must be preserved under
+all operations of the class. In particular all class invariants are
+both preconditions and post-conditions for all operations or member
+functions of the class. 
+
+What do you mean by Stack unwinding? 
+It is a process during exception handling when the destructor is called for all
+local objects between the place where the exception was thrown and
+where it is caught. 
+
+Define precondition and post-condition to a member function.
+Precondition: A precondition is a condition that must be true on entry
+to a member function. A class is used correctly if preconditions are
+never false. An operation is not responsible for doing anything
+sensible if its precondition fails to hold. For example, the interface
+invariants of stack class say nothing about pushing yet another element
+on a stack that is already full. We say that isful() is a precondition
+of the push operation. 
+Post-condition: A post-condition is a condition
+that must be true on exit from a member function if the precondition
+was valid on entry to that function. A class is implemented correctly
+if post-conditions are never false. For example, after pushing an
+element on the stack, we know that isempty() must necessarily hold.
+This is a post-condition of the push operation. 
+
+What are the conditions that have to be met for a condition to be an invariant of the class? 
+The condition should hold at the end of every constructor. 
+The condition should hold at the end of every mutator (non-const) operation. 
+What are proxy objects? 
+Objects that stand for other objects are called proxy objects or surrogates.
+
+template <class t="">
+class Array2D
+{
+ public:
+        class Array1D
+        {
+         public:
+          T& operator[] (int index);
+          const T& operator[] (int index)const;
+        };
+         Array1D operator[] (int index);
+        const Array1D operator[] (int index) const;
+};
+
+The following then becomes legal:
+
+Array2D<float>data(10,20);
+cout<<data[3][6];     //  fine
+
+Here data[3] yields an Array1D object
+and the operator [] invocation on that object yields the float in
+position(3,6) of the original two dimensional array. Clients of the
+Array2D class need not be aware of the presence of the Array1D class.
+Objects of this latter class stand for one-dimensional array objects
+that, conceptually, do not exist for clients of Array2D. Such clients
+program as if they were using real, live, two-dimensional arrays. Each
+Array1D object stands for a one-dimensional array that is absent from a
+conceptual model used by the clients of Array2D. In the above example,
+Array1D is a proxy class. Its instances stand for one-dimensional
+arrays that, conceptually, do not exist. 
+
+Name some pure object oriented languages. Smalltalk, Java, Eiffel, Sather. 
+Name the operators that cannot be overloaded. sizeof, ., .*, .->, ::, ?: Salam in the comments notes that -> can be overloaded. 
+What is a node class? A node class is a class that, 
+relies on the base class for services and implementation, 
+provides a wider interface to the users than its base class, 
+relies primarily on virtual functions in its public interface 
+depends on all its direct and indirect base class 
+can be understood only in the context of the base class 
+can be used as base for further derivation 
+can be used to create objects. 
+A node class is a class that has added new services or functionality beyond the services inherited from its base class. 
+
+What is an orthogonal base class?
+If two base classes have no overlapping methods or data they are said
+to be independent of, or orthogonal to each other. Orthogonal in the
+sense means that two classes operate in different dimensions and do not
+interfere with each other in any way. The same derived class may
+inherit such classes with no difficulty. 
+
+What is a container class? What are the types of container classes? 
+A container class is a class that is used to hold objects in memory or
+external storage. A container class acts as a generic holder. A
+container class has a predefined behavior and a well-known interface. A
+container class is a supporting class whose purpose is to hide the
+topology used for maintaining the list of objects in memory. When a
+container class contains a group of mixed objects, the container is
+called a heterogeneous container; when the container is holding a group
+of objects that are all the same, the container is called a homogeneous
+container. 
+ 
+ 

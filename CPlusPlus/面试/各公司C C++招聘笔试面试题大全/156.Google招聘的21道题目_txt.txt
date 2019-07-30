@@ -1,0 +1,161 @@
+Google招聘的21道题目—考智慧还是考灵气zz 
+shury 发表于 2005-7-27 13:06:00 
+
+Google招聘的21道题目—考智慧还是考灵气zz                                       
+
+  
+
+　　google brainy test/exam 就是流传甚广的传说中的google 的21道 GLAT 考试了。
+　　10月底，Google在美国《麻省技术评论》、《LinuxJournal》、《Mensa》、《今日物理》等几本专业杂志上，刊登了一份"Google实验室能力倾向测试"。
+　　试卷开头，蛊惑地写着"试试看！把答案寄回Google，你有希望去Google总部参观，并成为我们其中一员"。
+
+1. Solve this cryptic equation, realizing of
+course that values for M and E could be
+interchanged. No leading zeros are allowed.
+
+WWWDOT - GOOGLE = DOTCOM
+2. Write a haiku describing possible methods
+for predicting search traffic seasonality.
+
+3.
+1
+1 1
+2 1
+1 2 1 1
+1 1 1 2 2 1
+
+What is the next line?
+
+4. You are in a maze of twisty little passages,
+all alike. There is a dusty laptop here with a
+weak wireless connection. There are dull,
+lifeless gnomes strolling about. What dost
+thou do?
+
+A) Wander aimlessly, bumping into
+obstacles until you are eaten by a grue.
+B) Use the laptop as a digging device to
+tunnel to the next level.
+C) Play MPoRPG until the battery dies
+along with your hopes.
+D) Use the computer to map the nodes
+of the maze and discover an exit path.
+E) Email your resume to Google, tell the
+lead gnome you quit and find yourself
+in whole different world.
+
+5. What’s broken with Unix?
+How would you fix it?
+
+6. On your first day at Google, you discover
+that your cubicle mate wrote the textbook
+you used as a primary resource in your first
+year of graduate school. Do you:
+
+A) Fawn obsequiously and ask if you
+can have an autograph.
+B) Sit perfectly still and use only soft
+keystrokes to avoid disturbing her
+concentration.
+C) Leave her daily offerings of granola
+and English toffee from the food bins.
+
+D) Quote your favorite formula from the
+textbook and explain how it’s now
+your mantra.
+E) Show her how example 17b could
+have been solved with 34 fewer lines
+of code.
+7. Which of the following expresses Google□
+over-arching philosophy?
+
+A) "I’m feeling lucky"
+B) "Don’t be evil"
+C) "Oh, I already fixed that"
+D) "You should never be more than
+50 feet from food"
+E) All of the above
+
+8. How many different ways can you color an
+icosahedron with one of three colors on
+each face?
+
+What colors would you choose?
+
+9. This space left intentionally blank. Please fill it
+with something that improves upon emptiness.
+
+10.On an infinite, two-dimensional, rectangular
+lattice of 1-ohm resistors, what is the
+resistance between two nodes that are a
+knight’s move away?
+
+11.It’s 2 PM on a sunny Sunday afternoon in the
+Bay Area. You’re minutes from the Pacific
+Ocean, redwood forest hiking trails and world
+class cultural attractions. What do you do?
+
+12.In your opinion, what is the most beautiful
+math equation ever derived?
+
+13. Which of the following is NOT an actual
+interest group formed by Google employees?
+
+A. Women’s basketball
+B. Buffy fans
+C. Cricketeers
+D. Nobel winners
+E. Wine club
+
+14.What will be the next great improvement in
+search technology?
+
+15.What is the optimal size of a project team,
+above which additional members do not
+contribute productivity equivalent to the
+percentage increase in the staff size?
+A) 1
+B) 3
+C) 5
+D) 11
+E) 24
+
+16.Given a ABC, how would you use only
+a compass and straight edge to find a point P
+such that s ABP, ACP and BCP have
+equal perimeters? (Assume that ABC is
+constructed so that a solution does exist.)
+
+17.Consider a function which, for a given whole
+number n, returns the number of ones required
+when writing out all numbers between 0 and n.
+For example, f(13)=6. Notice that f(1)=1. What
+is the next largest n such that f(n)=n?
+
+18.What’s the coolest hack you’ve ever written?
+
+19.’Tis known in refined company, that choosing
+K things out of N can be done in ways as
+many as choosing N minus K from N: I pick K,
+you the remaining.
+
+Find though a cooler bijection, where you show
+a knack uncanny, of your choices contain
+all K of mine. Oh, for pedantry: let K be no more
+than half N.
+
+20.What number comes next in the sequence:
+10, 9, 60, 90, 70, 66,?
+
+A)96
+B) 1000000000000000000000000000000000
+0000000000000000000000000000000000
+000000000000000000000000000000000
+C) Either of the above
+D) None of the above
+
+21.In 29 words or fewer, describe what you
+would strive to accomplish if you worked
+at Google Labs. 
+ 
+ 

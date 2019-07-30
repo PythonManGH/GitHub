@@ -1,0 +1,20 @@
+Intel上海交大笔试题目zz 
+shury 发表于 2004-12-6 14:22:00 
+
+1。 pipeline
+2。 程序流程图题目
+3。 哲学家进餐
+4。 32bit，64bit，两个平台上complier，linker，os kernel，library，debuger的性质
+5。 const char * vs char const * (?)
+6。 GDT and LDT
+7。 1+1<<1
+8。 Stack性质
+9。 ？？？
+10。正方体中压力什么的。。。                                  
+
+大题
+1。f[40,400]，log10变换
+2。ACPI
+3。读程序
+4。频谱，采样分析 
+ 

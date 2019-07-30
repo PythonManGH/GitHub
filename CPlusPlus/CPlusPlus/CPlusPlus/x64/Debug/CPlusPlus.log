@@ -1,0 +1,5 @@
+﻿  CPlusPlus.cpp
+d:\work\github\cplusplus\cplusplus\cplusplus\cplusplus.cpp(11): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“int *”
+d:\work\github\cplusplus\cplusplus\cplusplus\cplusplus.cpp(11): warning C4313: “printf”: 格式字符串中的“%d”与“int *”类型的参数 1 冲突
+  CPlusPlus.vcxproj -> D:\work\GitHub\CPlusPlus\CPlusPlus\x64\Debug\CPlusPlus.exe
+  CPlusPlus.vcxproj -> D:\work\GitHub\CPlusPlus\CPlusPlus\x64\Debug\CPlusPlus.pdb (Full PDB)

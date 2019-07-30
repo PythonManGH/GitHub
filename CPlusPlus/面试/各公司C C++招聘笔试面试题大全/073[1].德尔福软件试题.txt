@@ -1,0 +1,124 @@
+德尔福软件试题ZZ 
+shury 发表于 2004-12-6 14:27:00 
+
+1. How do you code an infinite loop in C?
+2. Volatile:
+   a) What does the keyword volatile mean? Give an example
+   b) Can a parameter be both const and volatile? Give an example
+   c) Can a pointer be volatile? Give an example
+3.  What are the values of a, b, and c after the following instructions:
+    int a=5, b=7, c;
+    c = a+++b;
+4,  What do the following declarations mean?
+        a) const int a;
+        b) int const a;
+        c) const int *a;
+        d) int * const a;
+        e) int const * a const;
+5.  Which of the following statements describe the use of the keyword
+static?
+a) Within the body of a function: A static variable maintains its value
+      between function revocations
+
+
+  b) Within a module: A static variable is accessible by all functions
+      within that module
+  c) Within a module: A static function can only be called by other
+            functions within that module
+6.  Embedded systems always require the user to manipulate bits in
+registers or variables. Given an integer variable a, write two code fragments.
+The first should set bit 5 of a. The second shnuld clear bit 5 of a. In both
+cases, the remaining bits should be unmodified.
+7.  What does the following function return?
+      char foo(void)
+      {
+                 unsigned int a = 6;
+                 iht b = -20;
+                 char c;
+                 (a+b > 6) ? (c=1): (c=0);
+                 return c;
+      }
+8.  What values are printed when the following C program is executed?
+      int i = 8;
+      void main(void)
+      (
+
+
+
+9.  What will be the output of the following C code?
+     main()
+     {
+            int k, num= 30;
+            k =(num > 5 ? (num <=10 ? 100:200): 500);
+            printf("%d", k);
+     }
+10. What will the following C code do?
+        int *ptr;
+        ptr =(int *)Ox67a9;
+        *ptr = Oxaa55;
+11. What will be the output of the follow C code?
+     #define product(x) (x*x)
+     main()
+     {
+         int i = 3, j, k;
+         j = product(i++);
+         k = product(++i);
+         printf("%d %d",j,k);
+     }
+12. Simplify the following Boolean expression
+      !((i ==12) || (j > 15))
+
+
+13. How many flip-flop circuits are needed to divide by 16?
+14. Provides 3 properties that make an OS, a RTOS?
+15. What is pre-emption?
+16. Assume the BC register value is 8538H, and the DE register
+value is 62A5H.Find the value of register BC after the following
+assembly operations:
+        MOV A,C
+        SUB E
+        MOV C,A
+        MOV A,B
+        SBB D
+        MOV B,A
+17.In the Assembly code shown below
+  LOOP: MVI C,78H
+        DCR C
+        JNZ LOOP
+        HLT
+How many times is the DCR C Operation executed?
+18.Describe the most efficient way(in term of execution time
+and code size) to divide a number by 4 in assembly language
+19.what value is stored in m in the following assembly language code
+fragment if n=7?
+
+
+        LDAA #n
+LABEL1: CMPA #5
+        BHI  L3
+        BEQ  L2
+        DECA
+        BRA  L1
+LABEL2: CLRA
+LABEL3: STAA #m
+20. What is the state of a process if a resource is not
+available?
+21. Using the #define statement, how would you
+declare a manifest constant that returns the
+number of seconds in a year? Disregard leap
+years in your answer.
+22. Interrupts are an important part of embedded
+systems. Consequently, many compiler vendors
+offer an extension to standard C to support interrupts.
+Typically, the keyword is __interrupt. The following
+code uses __interrupt to define an interrupt service
+routine (ISR). Point out problems in the code.
+
+__interrupt double compute_area (double radius)
+
+
+          double area = PI * radius * radius;
+          printf("\nArea = %f", area);
+          return area;
+}  
+ 

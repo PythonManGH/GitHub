@@ -1,0 +1,6 @@
+华邦笔试题 - 软件方面(ZZ) 
+shury 发表于 2005-10-19 14:57:00 
+
+考了几道网络、硬件，之后有三道编译题目。 1、已知mac地址，如何得到ip地址。知道ip地址，如何得到mac地址。 2、ping用了什么协议 3、Tcp/ip的协议栈 4、dhcp功能 5、pc机bios有哪几个模块 6、列出你用过的和知道的编译器和解释器 7、编译器有哪几个模块 8、列出你用过的单片机及其编译器 9、硬盘的柱面、track、扇区的关系图 13、根据程序列出变量a、b、c最可能分配的段。     stack段 data段 heap段 bss段 txt段 int a; int b = 3; main() {    int c;    a = b;    c =a; } 14、写出程序的结果。 int *pChar; int *pInt; int nValue[10]; void main() {    int i;    for(i =0; i<10;i++)  nValue[i] = i;    pChar = (char *)nValue;    pInt = (int *)nValue;    pChar += 6;    pInt  += 6;    printf("*pChar = %d\r\n", *pChar);    printf("*pInt = %d\r\n", *pInt); } 15、写出下面程序的结果 class A { public:      A()    {       m_pData = NULL;    }     A(LPSTR p)    {      int n = strlen(p);      m_pData = new char[n+1];      memset(m_pData, 0, n+1);      memcpy(m_pData, p, n);      printf("Data=%d,Len =%d\n", m_pData, n);    }    ~A()    {       delete[] m_pData;    } private:     char * m_pData; } void main() {   A* pObj1 = new A("ABC");   A* pObj2 = pObj1;   A aObj1("DEF");   A aObj2=aObj1;   delete pObj2; }
+ 
+ 

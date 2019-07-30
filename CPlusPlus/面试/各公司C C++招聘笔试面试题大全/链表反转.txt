@@ -1,0 +1,103 @@
+#include <iostream>
+using namespace std;
+
+typedef struct _NODE
+{
+	int value;
+	_NODE * next;
+	_NODE(int v);
+}NODE, *PNODE;
+
+_NODE::_NODE(int v)
+{
+	value=v;
+	next=NULL;
+}
+
+class LinkList
+{
+friend ostream& operator<<(ostream &os,LinkList &T);
+public:
+	LinkList(){head=NULL;tail=NULL;
+	}
+	~LinkList();
+	bool Insert(int v);
+	void Reverse();
+private:
+   LinkList(const LinkList&);
+   LinkList & operator=(const LinkList&);
+   PNODE head;
+   PNODE tail;
+};
+
+ostream& operator<<(ostream &os,LinkList &T)
+{
+	PNODE pNode=T.head;
+	for(; pNode!=NULL; pNode=pNode->next)
+	{	
+		os << pNode->value << ' ';
+	};
+	os << endl;
+
+	return os;
+}
+
+LinkList::~LinkList()
+{
+	PNODE prev=head, now;
+	while(prev!=NULL)
+	{
+		now=prev->next;
+		delete prev;
+		prev=now;
+	}
+	head=NULL;
+	tail=NULL;
+}
+
+bool LinkList::Insert(int v)
+{
+	PNODE temp=new NODE(v);
+    if(NULL==temp)
+        return false;
+	if(NULL==head)
+	{
+		head=temp;
+		tail=temp;
+	}
+	else
+	{
+		tail->next=temp;
+		tail=temp;
+	}
+	temp=NULL;
+    return true;
+}
+
+void LinkList::Reverse()
+{
+	tail=head;
+	PNODE headtemp=head->next;
+	PNODE headrest=headtemp->next;
+	tail->next=NULL;
+	while(headrest!=NULL)
+	{
+		headtemp->next=head;
+		head=headtemp;
+		headtemp=headrest;
+		headrest=headrest->next;
+	}
+	headtemp->next=head;
+	head=headtemp;
+	headtemp=NULL;
+}
+
+int main()
+{
+	LinkList linkT;
+    for(int i=0; i<10; i++)
+		linkT.Insert(i);
+    linkT.Reverse();
+    cout << linkT << endl;
+	return 0;
+}

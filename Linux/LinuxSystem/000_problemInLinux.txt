@@ -1,0 +1,4 @@
+1. How do you give a common user the same privileges as root
+	vi /etc/sudoers
+		root    ALL=(ALL)       ALL
+		hadoop  ALL=(ALL)       ALL

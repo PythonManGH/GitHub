@@ -1,0 +1,112 @@
+STmicroelectronics Software 笔试题ZZ 
+shury 发表于 2004-12-6 14:58:00 
+
+题出得很好,看他们也没什么保密的意思,正好我
+有机会回忆个差不多,就拿出来共享吧!
+同时感谢师姐帮我抄了横大一部分 !
+也算报答我平时从career版得到的好处!
+
+
+Software
+
+                A Test for The C Programming Language
+
+I. History
+1.   C was originally designed for and implemented on the (what)______ operating 
+system on the DEC PDP-11, by (who)_______.
+
+2.   The most recently approved ANSI/ISO C standard was issued in (when)_____, 
+and single line comments notation "//" is or isn't a feature of C89.
+
+
+
+II.   Syntax and Semantics
+1.   In a runtime C program, auto variables are stored in _____, static variables are
+stored in _____, and function parameters are stored in ______.
+a. stack     b. heap     c. neither stack nor heap
+
+2.   The statement "extern int x;" is a _____, and the keyword extern is used during
+_____.
+a. variable declaration   b. variable definition    c. compilation time   d. runtime
+
+3.   There is a complicated declaration :   void ( * signal (int, void (*)(int)) ) (int);
+If a statement " typedef void (*p) (int); " is given, please rewrite this complicated 
+declaration. ______________________________
+
+4.   The following code is a segment of C program.
+
+..........
+void func(int *p)
+{...........}
+..........
+main()
+{
+  int num=0;
+  .........
+  func(&num);
+  ........
+}
+..........
+
+Here, the function argument " &num " is passed ________.
+a. by value         b. by reference
+
+
+III. Practice
+Create a tree, which has h (h>0) layers, and its each node has w (w>0) sub-nodes. 
+Please complete the following incomplete solution.
+
+＃i nclude <stdlib.h>
+＃i nclude <string.h>
+
+struct tree{
+  char info;
+  _____________  p_sub; //link to sub-nodes
+};
+
+// allocate memory and initiate
+void dnode ( struct tree* tmp )
+{
+  __________ = _________ malloc( sizeof (struct tree) );
+  __________ = 0x41;
+  __________ = NULL;
+}
+
+struct tree *dtree (struct tree* subtree, int height, int width)
+{
+  int i;
+
+  if ( !subtree )  //if necessary, allocte memory for subtree
+    denode(subtree);
+
+  if ( height == 1 )
+    return subtree;
+  else if ( height == 2 ) {
+    struct tree *leaf = NULL;
+    ____________________
+    for ( i=0; i<width; i++ ) {
+      denode (_____);
+      _______________;
+      leaf = NULL;
+    }
+    _______________________
+    return subtree;
+  }
+  else {
+  _________________________
+  for ( i=0; i<width; i++ ) {
+    ____________________
+  }
+  ______________________
+  return subtree;
+  }
+}
+
+main()
+{
+  .........
+  struct tree *root = NULL;
+  root = dtree (root, h, w) ; // h and w are integers get from input
+  .........
+ 
+}
