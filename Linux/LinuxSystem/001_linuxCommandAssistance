@@ -73,6 +73,9 @@
 	4.6 which : Show the full path of commands
 	4.7 whereis : Locate the binary,source,and manual page files for a command
 	4.8 whatis : Search the whatis database for complete words
+	4.9 The difference between which and whereis
+		which : Only search in paths included in PATH
+		whereis : The range the "whereis" searchs is brodered than the range "which" searchs 	
 5. Common Configuration Files
 	5.1 Configure Network Card information
 		/etc/sysconfig/network-scripts/ifcfg-eth0	
@@ -97,9 +100,37 @@
 		whoami ： Print effective userid
 		w ： Show who is logged on and what they doing
 8. Linux file system	
-	
-			 
 
+
+9. Base's basic feature
+	9.1 The command history : history
+		(1) releated environments
+			1): HISTSIZE --> How many commands saved in history
+			2): HISTFILE --> Which file the history commands saved
+				echo $HISTFILE 
+					/home/liuj/.bash_history
+			3): HISTFILESIZE --> How many commands saved in HISTFILE		
+		(2) Remove history
+			history -d OFFSET --> remove specified command
+			history -c --> clear all commands
+		(3) show history
+			history 10 --> List the latest 10 commands in history
+		(4) Append commands to HISTFILE
+			history -a
+		(5) Invokes a command in history
+			!# : Invokes specified command
+			!! : Invokes last command
+			!string :
+		(6) The last parameter of the previous command	
+			!$ : The last parameter of the previous command
+			ESC 松开 . : The last parameter of the previous command
+			alt 按住 . : The last parameter of the previous command
+		(7) Controls which commands are not recorded in command history
+			We use HISTCONTROL to control this
+				HISTCONTROL :
+					ignoredups --> 
+					ignorespace -->
+					ignoreboth -->	
 
 
 -l : long
