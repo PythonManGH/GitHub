@@ -3,8 +3,11 @@
 		(1) The same points :
 			They are both static storage mode
 		(2) The differences :
-			They have different scope,global variable's scope throughout the program,
-			but static global variable's scope were limited in the source file defined it
+			1) They have different scope,global variable's scope throughout the program,
+			2) but static global variable's scope were limited in the source file defining it.
+				And alse because of static global variable's scope were limited in the source file and 
+					only be used for functions within that source file,you can avoid causing errors in 
+					other source file		
 	1.2 The difference between local variables and static local variables
 		(1) 
 	1.3 The difference between functions and static functions	
