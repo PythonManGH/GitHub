@@ -131,7 +131,12 @@
 					ignoredups --> 
 					ignorespace -->
 					ignoreboth -->	
-
+	9.2 Command complation
+	9.3 Path commpletion
+10. Directory related command
+	10.1 cd pwd ls 
+	10.2 mkdir : 
+		mkdir /a/b/c   a,b must be existed
 
 -l : long
 -r : reverse
