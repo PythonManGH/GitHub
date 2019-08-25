@@ -1,0 +1,8 @@
+package liu.hadoop.java;
+
+public class ArrayTest {
+	public static void main(String[] args) {
+		int[] arr1; // 声明一个数组
+		arr1 = new int[]{1,2,3,4,5,6};
+	}
+}
