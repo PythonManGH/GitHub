@@ -1,0 +1,9 @@
+package com.hadoop.mapReduce.flow;
+
+import org.apache.hadoop.conf.Configuration;
+
+public class FlowDriver {
+	public static void main(String[] args){
+		Configuration configuration = new Configuration();
+	}
+}

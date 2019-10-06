@@ -1,0 +1,7 @@
+package com.hadoop.mapReduce.flow;
+
+import org.apache.hadoop.mapreduce.Mapper;
+
+public class FlowMapper extends Mapper{
+
+}

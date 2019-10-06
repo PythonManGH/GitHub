@@ -1,0 +1,3 @@
+Caused by: java.io.IOException: Initialization of all the collectors failed. Error in last collector was :class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+	原因：import 错误的包  import com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider.Text;
+	修改：import org.apache.hadoop.io.Text;

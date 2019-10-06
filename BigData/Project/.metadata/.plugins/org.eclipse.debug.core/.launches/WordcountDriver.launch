@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/mapReducer/src/com/hadoop/mapReduce/wordcount/WordcountDriver.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.hadoop.mapReduce.wordcount.WordcountDriver"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="D:/work/GitHub/BigData/Project/resource/wordCount/input D:/work/GitHub/BigData/Project/resource/wordCount/output"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="mapReducer"/>
+</launchConfiguration>

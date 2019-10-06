@@ -1,0 +1,42 @@
+package com.hadoop.mapReduce.flow;
+
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
+
+import org.apache.hadoop.io.Writable;
+
+public class FlowBean implements Writable{
+
+	private long upFlow;
+	private long downFlow;
+	private long sumFlow;
+	
+	
+	// 必须要一个空参构造，因为反序列化必须要用到
+	public FlowBean() {
+		super();
+	}
+
+	public FlowBean(long upFlow, long downFlow) {
+		super();
+		this.upFlow = upFlow;
+		this.downFlow = downFlow;
+		this.sumFlow = upFlow + downFlow;
+	}
+
+	// 从磁盘中读到内存，反序列化
+	@Override
+	public void readFields(DataInput arg0) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	// 从内存中读到磁盘，序列化
+	@Override
+	public void write(DataOutput arg0) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

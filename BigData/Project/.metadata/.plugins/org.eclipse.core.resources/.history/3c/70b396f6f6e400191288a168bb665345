@@ -1,0 +1,13 @@
+package com.hadoop.mapReduce.flow;
+
+import org.apache.hadoop.mapreduce.Partitioner;
+
+public class FlowPartitioner extends Partitioner<Text,FlowBean>{
+
+	@Override
+	public int getPartition(Object key, Object value, int numPartitions) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.hadoop.mapReduce.flow;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.mapreduce.Job;
+
+public class FlowDriver {
+	public static void main(String[] args) throws IOException{
+		
+		// 1. ªÒ»° job
+		Configuration configuration = new Configuration();
+		Job job = Job.getInstance(configuration);
+	}
+}

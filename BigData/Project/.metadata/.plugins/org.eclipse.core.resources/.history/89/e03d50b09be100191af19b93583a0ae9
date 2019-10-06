@@ -1,0 +1,7 @@
+package com.hadoop.mapReduce.flow;
+
+import org.apache.hadoop.io.Writable;
+
+public class FlowBean extends Writable{
+
+}

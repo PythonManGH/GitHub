@@ -1,0 +1,5 @@
+package com.hadoop.mapReduce.flow;
+
+public class FlowMapper {
+
+}

@@ -1,0 +1,21 @@
+package com.hadoop.mapReduce.flow;
+
+import java.io.IOException;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.mapreduce.Job;
+
+public class FlowDriver {
+	public static void main(String[] args) throws IOException{
+		
+		// 1. 获取 job
+		Configuration configuration = new Configuration();
+		Job job = Job.getInstance(configuration);
+		
+		// 2. 获取jar包存储路径
+		job.setJarByClass(FlowDriver.class);
+		
+		// 3. 设置 mapper和reducer的class类
+		
+	}
+}
